@@ -1,11 +1,14 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet } from 'react-native';
+import { Container } from 'native-base';
+import Tetris from './components/BlockT.js';
+import ApiTester from './components/ApiTester.js';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Oinas</Text>
-    </View>
+    <Container style={styles.fill}>
+      <ApiTester style={styles.fill}/>
+    </Container>
   );
 }
 
@@ -16,4 +19,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  fill: {
+    ...StyleSheet.absoluteFillObject,
+  }
 });
